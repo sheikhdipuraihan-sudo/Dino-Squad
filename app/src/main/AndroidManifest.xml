@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-feature android:name="android.hardware.gamepad" android:required="false"/>
     <application
         android:allowBackup="false"
@@ -15,5 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.seleuco.mame4droid.MAME4droid" android:label="Dino Squad Emulator" android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:exported="false" android:windowSoftInputMode="stateAlwaysHidden" android:theme="@style/Theme.MAME4droid" />
+        <activity android:name="com.seleuco.mame4droid.prefs.UserPreferences" android:theme="@style/Theme.MAME4droid.TitleBar" android:label="Dino Squad Emulator Settings" android:exported="false" />
+        <activity android:name="com.seleuco.mame4droid.WebHelpActivity" android:theme="@style/Theme.MAME4droid.TitleBar" android:label="Dino Squad Emulator Help" android:exported="false" />
+        <activity android:name="com.seleuco.mame4droid.prefs.DefineKeys" android:theme="@style/Theme.MAME4droid.TitleBar" android:label="Dino Squad Define Keys" android:exported="false" />
+        <activity android:name="com.seleuco.mame4droid.prefs.ListKeys" android:theme="@style/Theme.MAME4droid.TitleBar" android:label="Dino Squad Player Keys" android:exported="false" />
+        <activity android:name="com.seleuco.mame4droid.prefs.KeySelect" android:theme="@android:style/Theme.Dialog" android:exported="false" />
     </application>
 </manifest>
